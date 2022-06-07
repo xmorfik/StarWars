@@ -18,13 +18,13 @@ namespace StarWarsForPoor
         public event GetStatus ShipDead;
         bool GameOver = true;
         public int Score;
-
-        public static Bitmap SpaceField = new Bitmap(@"img\Space.jpg");
         List<Asteroid> Asteroids;
         List<Bullet> Bullets;
         public static Ship ShipInSpace;
-        Factory astrFactory = new Factory();
+      
 
+        public static Bitmap SpaceField = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
+        Factory astrFactory = new Factory();
 
         public Space(int amountAstr = 0)
         {
@@ -32,8 +32,8 @@ namespace StarWarsForPoor
             this.Asteroids = new List<Asteroid>();
             this.Bullets = new List<Bullet>();
             Space.ShipInSpace = new Ship(
-          new Hull(1, new Bitmap(@"img\Hull.png"), 1, 10)
-        , new Weapon(1, new Bitmap(@"img\Weapon.png"), 1, new Bitmap(@"img\Bullet1.png")));
+          new Hull(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull.png"), 1, 10)
+        , new Weapon(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon.png"), 1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet1.png")));
 
             for (int i = 0; i < amountAstr; i++)
             {
@@ -46,9 +46,9 @@ namespace StarWarsForPoor
         {
             if (GameOver)
             {
-                return new Bitmap(@"img\Space.jpg");
+                return new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
             }
-            Space.SpaceField = new Bitmap(@"img\Space.jpg");
+            Space.SpaceField = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
             Space.SpaceField = Space.ShipInSpace.Draw(Space.SpaceField);
             foreach (Asteroid item in this.Asteroids)
             {

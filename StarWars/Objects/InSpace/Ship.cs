@@ -16,7 +16,7 @@ namespace StarWarsForPoor.Objects.InSpace
         public Weapon Pushka;
         public Hull Vedro;
         public Ship(Hull hull,
-        Weapon weapon) : base(new Bitmap(@"img\Ship.png"), default, default, 1)
+        Weapon weapon) : base(new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Ship.png"), default, default, 1)
         {
             Color colour;
             for (int i = 0; i < 50; i++)

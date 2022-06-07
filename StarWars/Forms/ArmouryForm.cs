@@ -64,7 +64,7 @@ namespace StarWarsForPoor
 
         private void Hull1_Click(object sender, EventArgs e)
         {
-            h1.HullImg = new Bitmap(@"img\Hull1n.png");
+            h1.HullImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull1n.png");
             h1.ChosenHull = new Hull(cost: 100, health: 20, ammo: 50);
             
             ShipPreview.Image = h1.Draw();
@@ -72,7 +72,7 @@ namespace StarWarsForPoor
 
         private void Hull_Click(object sender, EventArgs e)
         {
-            h1.HullImg = new Bitmap(@"img\Hull.png");
+            h1.HullImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull.png");
             h1.ChosenHull = new Hull(cost: 150, health: 30, ammo: 25);
            
             ShipPreview.Image = h1.Draw();
@@ -80,7 +80,7 @@ namespace StarWarsForPoor
 
         private void Hull2_Click(object sender, EventArgs e)
         {
-            h1.HullImg = new Bitmap(@"img\Hull2.png");
+            h1.HullImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull2.png");
             h1.ChosenHull = new Hull(cost: 125, health: 15, ammo: 100);
             
             ShipPreview.Image = h1.Draw();
@@ -88,40 +88,40 @@ namespace StarWarsForPoor
 
         private void Weapon1_Click(object sender, EventArgs e)
         {
-            h1.WeaponImg = new Bitmap(@"img\Weapon.png");
-            h1.BulletImg = new Bitmap(@"img\Bullet1n.png");
+            h1.WeaponImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon.png");
+            h1.BulletImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet1n.png");
             h1.ChosenWeapon = new Weapon(cost: 10, damage: 1);
             ShipPreview.Image = h1.Draw();
         }
 
         private void Weapon2_Click(object sender, EventArgs e)
         {
-            h1.WeaponImg = new Bitmap(@"img\Weapon1.png");
-            h1.BulletImg = new Bitmap(@"img\Bullet2n.png");
+            h1.WeaponImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon1.png");
+            h1.BulletImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet2n.png");
             h1.ChosenWeapon = new Weapon(cost: 15, damage: 2);
             ShipPreview.Image = h1.Draw();
         }
 
         private void Weapon3_Click(object sender, EventArgs e)
         {
-            h1.WeaponImg = new Bitmap(@"img\Weapon2.1.png");
-            h1.BulletImg = new Bitmap(@"img\Bullet3n.png");
+            h1.WeaponImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon2.1.png");
+            h1.BulletImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet3n.png");
             h1.ChosenWeapon = new Weapon(cost: 20, damage: 3);
             ShipPreview.Image = h1.Draw();
         }
 
         private void Weapon4_Click(object sender, EventArgs e)
         {
-            h1.WeaponImg = new Bitmap(@"img\Weapon3.png");
-            h1.BulletImg = new Bitmap(@"img\Bullet4n.png");
+            h1.WeaponImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon3.png");
+            h1.BulletImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet4n.png");
             h1.ChosenWeapon = new Weapon(cost: 25, damage: 4);
             ShipPreview.Image = h1.Draw();
         }
 
         private void Weapon5_Click(object sender, EventArgs e)
         {
-            h1.WeaponImg = new Bitmap(@"img\Weapon4.png");
-            h1.BulletImg = new Bitmap(@"img\Bullet5n.png");
+            h1.WeaponImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon4.png");
+            h1.BulletImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet5n.png");
             h1.ChosenWeapon = new Weapon(cost: 30, damage: 5);
             ShipPreview.Image = h1.Draw();
         }

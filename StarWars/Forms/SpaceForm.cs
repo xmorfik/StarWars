@@ -16,7 +16,7 @@ namespace StarWarsForPoor
 {
     public partial class SpaceWinForm : Form
     {
-        public Space CurentSpace = new Space(20);
+        public Space CurentSpace = new Space(1);
         System.Windows.Forms.Timer timer ;
         public SpaceWinForm()
         {

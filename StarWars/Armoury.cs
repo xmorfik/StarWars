@@ -15,26 +15,26 @@ namespace StarWarsForPoor
     public class Armoury
     {
         Bitmap ShipField;
-        public  Bitmap HullImg = new Bitmap(@"img\Hull.png");
-        public  Bitmap WeaponImg = new Bitmap(@"img\Weapon.png");
-        public  Bitmap BulletImg = new Bitmap(@"img\Bullet1.png");
-        public  Hull ChosenHull = new Hull(1, new Bitmap(@"img\Hull.png"), 1, 10);
-        public  Weapon ChosenWeapon = new Weapon(1, new Bitmap(@"img\Weapon.png"), 1, new Bitmap(@"img\Bullet1.png"));
+        public  Bitmap HullImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull.png");
+        public  Bitmap WeaponImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon.png");
+        public  Bitmap BulletImg = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet1.png");
+        public  Hull ChosenHull = new Hull(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull.png"), 1, 10);
+        public  Weapon ChosenWeapon = new Weapon(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon.png"), 1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet1.png"));
         public  Ship ChoosenShip = new Ship(
-          new Hull(1, new Bitmap(@"img\Hull.png"), 1, 10)
-        , new Weapon(1, new Bitmap(@"img\Weapon.png"), 1, new Bitmap(@"img\Bullet1.png")));
+          new Hull(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull.png"), 1, 10)
+        , new Weapon(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon.png"), 1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet1.png")));
 
         public Armoury()
         {
             
-            this.ShipField = new Bitmap(@"img\Space.jpg");
+            this.ShipField = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
         }
 
         public Bitmap Draw()
         {
             Ship ShipPreview = new Ship(new Hull(1, HullImg, 1, 10), new Weapon(1, WeaponImg, 1, BulletImg));
             ShipPreview.MoveShip(new Point(90, 40));
-            this.ShipField = new Bitmap(@"img\Space.jpg");
+            this.ShipField = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
             this.ShipField = ShipPreview.Draw(this.ShipField);
             return this.ShipField;
         }
@@ -43,7 +43,7 @@ namespace StarWarsForPoor
         {
             XmlSerializer FormatterHull = new XmlSerializer(typeof(Hull));
             XmlSerializer FormatterWeapon = new XmlSerializer(typeof(Weapon));
-            using (FileStream fs = new FileStream($@"{part}hull3.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream($@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\dat\hull3.xml", FileMode.OpenOrCreate))
             {
                 
             }
