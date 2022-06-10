@@ -17,8 +17,10 @@ namespace StarWarsForPoor.Helpers
         XmlSerializer formatter = new XmlSerializer(typeof(Money));
         public void WriteMoneyToXml(Money m)
         {
-            using (FileStream fs = new FileStream("Money.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("Money.xml", FileMode.Truncate))
             {
+                StreamWriter sw = new StreamWriter(fs);
+                sw.Write(String.Empty);
                 formatter.Serialize(fs, m);
             }
         }
