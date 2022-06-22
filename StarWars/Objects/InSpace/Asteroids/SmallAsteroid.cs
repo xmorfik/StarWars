@@ -11,8 +11,8 @@ namespace StarWarsForPoor.Objects.InSpace.Asteroids
 {
     public class SmallAsteroid : Asteroid, IShipMod
     {
-        public SmallAsteroid() : base(new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Asteroid1.png"),
-                          new Point(RngProvider.Random.Next(0, Space.SpaceField.Width), -(new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Asteroid1.png").Height)),
+        public SmallAsteroid() : base(new Bitmap(@"C:img\Asteroid1.png"),
+                          new Point(RngProvider.Random.Next(0, Space.SpaceField.Width), -(new Bitmap(@"C:img\Asteroid1.png").Height)),
                           new Point(RngProvider.Random.Next(-Factory.MaxSpeedX, Factory.MaxSpeedX), RngProvider.Random.Next(Factory.MinSpeedY, Factory.MaxSpeedY)),
                           1)
         {

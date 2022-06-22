@@ -13,26 +13,22 @@ namespace StarWarsForPoor.Objects.InSpace.HealAndAmmo
     {
         public static int AmmoInSpace = 0;
         static int AmmoAmount = 20;
-        public Ammo() : base(new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Ammo.png"),
-                      new Point(RngProvider.Random.Next(0, Space.SpaceField.Width), -(new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Ammo.png").Height)),
+        public Ammo() : base(new Bitmap(@"C:img\Ammo.png"),
+                      new Point(RngProvider.Random.Next(0, Space.SpaceField.Width), -(new Bitmap(@"C:img\Ammo.png").Height)),
                       new Point(RngProvider.Random.Next(-Factory.MaxSpeedX, Factory.MaxSpeedX), RngProvider.Random.Next(Factory.MinSpeedY, Factory.MaxSpeedY)),
                       1)
         {
             AmmoInSpace++;
         }
-
         override public void Modificate(Ship ship)
         {
               this.Lives = 0;
               ship.Vedro.Ammo += Ammo.AmmoAmount;
-              
         }
-
         override public bool IsPunch(object obj)
         {
             return false;
         }
-
         ~Ammo()
         {
             AmmoInSpace--;

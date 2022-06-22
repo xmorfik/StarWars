@@ -13,13 +13,11 @@ namespace StarWarsForPoor.Objects.InSpace
     {
         ChangePicture ChangeAsteroidImg;
         ChangeVector ChangeAsteroidVector;
-
         const int ImgAmount = 3;
         static int MinSpeedY = 1;
         static int MaxSpeedY = 6;
         static int MaxSpeedX = 2;
         public int Damage = 0;
-
         public Asteroid
           (
           Bitmap appearance,
@@ -52,7 +50,6 @@ namespace StarWarsForPoor.Objects.InSpace
 
             return newAsteroid;
         }
-
         public void Change(object obj)
         {
             Asteroid asteroid = (Asteroid)obj;
@@ -67,7 +64,6 @@ namespace StarWarsForPoor.Objects.InSpace
                 this.ChangeAsteroidImg(asteroid.Appearance);
             }
         }
-
         public void Punch(object obj)
         {
             if(obj is Ammo||obj is Heal || this is Ammo || this is Heal)
@@ -89,7 +85,6 @@ namespace StarWarsForPoor.Objects.InSpace
             }
 
         }
-
         void ChangeAsteroid1(Bitmap img)
         {
             Color color;
@@ -120,13 +115,11 @@ namespace StarWarsForPoor.Objects.InSpace
             }
             this.Appearance = img;
         }
-
         void ChangeRotate(Bitmap img)
         {
             img.RotateFlip(RotateFlipType.Rotate90FlipNone);
             this.Appearance = img;
         }
-
         void ChangeVectorInvert(Point vector)
         {
             if (vector.X == 0)
@@ -136,13 +129,11 @@ namespace StarWarsForPoor.Objects.InSpace
             }
             this.Vector.X = -this.Vector.X;
         }
-
         void ChangeVectorZeroVector(Point vector)
         {
             this.Vector.X = vector.X;
             this.Vector.Y += 1;
         }
-
         public void CheckCoordinates(Bitmap filed)
         {
             if (this.Coordinates.X >= filed.Width || this.Coordinates.Y >= filed.Height)
@@ -154,12 +145,10 @@ namespace StarWarsForPoor.Objects.InSpace
                 this.Lives = 0;
             }
         }
-
         public void ChangeThisAsteroid(Asteroid asteroid)
         {
             this.ChangeThisAsteroid(asteroid.Appearance, asteroid.Coordinates, asteroid.Vector);
         }
-
         void ChangeThisAsteroid(Bitmap img,
                                  Point coordinates,
                                  Point vector)
@@ -168,7 +157,6 @@ namespace StarWarsForPoor.Objects.InSpace
             this.Coordinates = coordinates;
             this.Vector = vector;
         }
-
         public bool IsDifDirection(Asteroid asteroid)
         {
             if (asteroid.Vector.X > 0 && this.Vector.X < 0)
@@ -194,13 +182,10 @@ namespace StarWarsForPoor.Objects.InSpace
                 return true;
             }
         }
-
         virtual public void Modificate(Ship ship)
         {
             this.Lives = 0;
             ship.Lives -= this.Damage;
         }
-
     }
-
 }

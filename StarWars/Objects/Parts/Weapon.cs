@@ -12,13 +12,11 @@ namespace StarWarsForPoor.Objects.Parts
     {
         public int Damage;
         public Bitmap BulletImg;
-
         public Weapon(int cost = 0, Bitmap appearence = null, int damage = 0, Bitmap bullet = null) : base(cost, appearence)
         {
             this.Damage = damage;
             this.BulletImg = bullet;
         }
-
         public Weapon() : base()
         {
             this.Damage = 0;

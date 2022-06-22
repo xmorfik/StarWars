@@ -12,11 +12,10 @@ namespace StarWarsForPoor.Objects.InSpace
 {
     public class Ship : MyObject
     {
-        
         public Weapon Pushka;
         public Hull Vedro;
         public Ship(Hull hull,
-        Weapon weapon) : base(new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Ship.png"), default, default, 1)
+        Weapon weapon) : base(new Bitmap(@"C:img\Ship.png"), default, default, 1)
         {
             Color colour;
             for (int i = 0; i < 50; i++)
@@ -43,17 +42,14 @@ namespace StarWarsForPoor.Objects.InSpace
             hull.Ammo = hull.ammoMax;
             this.Lives = hull.Health;
         }
-
         public void MoveShip(Point destination)
         {
             this.Coordinates = destination;
         }
-
         public void Change(object obj)
         {
 
         }
-
         public void CheckCoordinates(Bitmap filed)
         {
             if (this.Coordinates.X + this.Size.X >= filed.Width)
@@ -73,7 +69,6 @@ namespace StarWarsForPoor.Objects.InSpace
                 this.Coordinates.Y = 0;
             }
         }
-
         public Bullet Fire()
         {
             if (this.Vedro.Ammo <= 0)
@@ -89,7 +84,6 @@ namespace StarWarsForPoor.Objects.InSpace
 
             }
         }
-
         public Status GetStatus()
         {
             Status thisShip;
@@ -97,8 +91,6 @@ namespace StarWarsForPoor.Objects.InSpace
             thisShip.Health = this.Lives;
             return thisShip;
         }
-
-      
         public struct Status
         {
             

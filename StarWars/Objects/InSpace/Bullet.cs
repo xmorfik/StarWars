@@ -9,7 +9,6 @@ namespace StarWarsForPoor.Objects.InSpace
 {
     public class Bullet : MyObject, IPunch
     {
-       
         public Bullet
           (
           Bitmap appearance,
@@ -19,19 +18,16 @@ namespace StarWarsForPoor.Objects.InSpace
           ) : base(appearance, coordinates, vector, lives)
         {
         }
-
         public void Change(object obj)
         {
             this.Vector.Y--;
         }
-
         public void Punch(object obj)
         {
             Asteroid asteroid = (Asteroid)obj;
             asteroid.HitLives(this.Lives);
             this.HitLives(asteroid.Damage);
         }
-
         public void CheckCoordinates(Bitmap filed)
         {
             if (this.Coordinates.X < 0 || this.Coordinates.Y < 0)
@@ -43,7 +39,5 @@ namespace StarWarsForPoor.Objects.InSpace
                 this.Lives = 0;
             }
         }
-
-      
     }
 }

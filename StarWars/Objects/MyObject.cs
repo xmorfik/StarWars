@@ -9,11 +9,9 @@ namespace StarWarsForPoor
 {
     public delegate void ChangePicture(Bitmap img);
     public delegate void ChangeVector(Point vector);
-
     public abstract class MyObject : ILives
     {
         public int Lives;
-
         private Bitmap appearance;
         public Bitmap Appearance
         {
@@ -132,7 +130,6 @@ namespace StarWarsForPoor
                 return;
             }
         }
-
         public int GetLives()
         {
             return this.Lives;

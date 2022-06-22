@@ -13,14 +13,12 @@ namespace StarWarsForPoor.Objects.Parts
         public int Health;
         public int Ammo;
         public int ammoMax;
-
         public Hull(int cost = 0, Bitmap appearence = null, int health = 0, int ammo = 0) : base(cost, appearence)
         {
             this.Health = health;
             this.Ammo = ammo;
             this.ammoMax = ammo;
         }
-
         public Hull() : base()
         {
             this.Health = 0;

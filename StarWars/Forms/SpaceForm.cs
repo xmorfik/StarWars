@@ -33,32 +33,20 @@ namespace StarWarsForPoor
                 this.GameField.Image = CurentSpace.DrawFrame();
             });
         }
-
-        
-
-        
-
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             CurentSpace.ShipMove(new Point(e.Location.X, e.Location.Y));
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             CurentSpace.ShipFire();
         }
-
-        
-
-        
-
         public void GetShip(Ship selected)
         {
 
             CurentSpace.GetShip(selected);
             timer.Start();
         }
-
         public void GameOver(ShipScore dat)
         {
             this.timer.Stop();

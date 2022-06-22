@@ -15,13 +15,11 @@ namespace StarWarsForPoor.Objects.Parts
     {
         public int Cost;
         public Bitmap Appearance;
-
         public Part(int cost = 0, Bitmap appearence = null)
         {
             this.Cost = cost;
             this.Appearance = appearence;
         }
-
         public Part()
         {
             this.Cost = 0;

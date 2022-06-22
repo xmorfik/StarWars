@@ -21,19 +21,16 @@ namespace StarWarsForPoor
         List<Asteroid> Asteroids;
         List<Bullet> Bullets;
         public static Ship ShipInSpace;
-      
-
-        public static Bitmap SpaceField = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
+        public static Bitmap SpaceField = new Bitmap(@"C:img\Space.jpg");
         Factory astrFactory = new Factory();
-
         public Space(int amountAstr = 0)
         {
             this.Score = 0;
             this.Asteroids = new List<Asteroid>();
             this.Bullets = new List<Bullet>();
             Space.ShipInSpace = new Ship(
-          new Hull(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Hull.png"), 1, 10)
-        , new Weapon(1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Weapon.png"), 1, new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Bullet1.png")));
+          new Hull(1, new Bitmap(@"C:img\Hull.png"), 1, 10)
+        , new Weapon(1, new Bitmap(@"C:img\Weapon.png"), 1, new Bitmap(@"C:img\Bullet1.png")));
 
             for (int i = 0; i < amountAstr; i++)
             {
@@ -41,14 +38,13 @@ namespace StarWarsForPoor
             }
             this.GameOver = false;
         }
-
         public Bitmap DrawFrame()
         {
             if (GameOver)
             {
-                return new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
+                return new Bitmap(@"C:img\Space.jpg");
             }
-            Space.SpaceField = new Bitmap(@"C:\Users\A\Documents\GitHub\StarWarsForPoor\StarWars\img\Space.jpg");
+            Space.SpaceField = new Bitmap(@"C:img\Space.jpg");
             Space.SpaceField = Space.ShipInSpace.Draw(Space.SpaceField);
             foreach (Asteroid item in this.Asteroids)
             {
@@ -71,7 +67,6 @@ namespace StarWarsForPoor
             this.CheckShip();
             return Space.SpaceField;
         }
-
         public void CheckAstrPunchAstrAndShip()
         {
             foreach (Asteroid astrOne in this.Asteroids)
@@ -97,7 +92,6 @@ namespace StarWarsForPoor
                 }
             }
         }
-
         public void CheckBulletsPunchAstr()
         {
             foreach (Asteroid asteroid in this.Asteroids)
@@ -115,12 +109,10 @@ namespace StarWarsForPoor
                 }
             }
         }
-
         public void ShipMove(Point coordinates)
         {
             Space.ShipInSpace.MoveShip(coordinates);
         }
-
         public void ShipFire()
         {
             Bullet shipBullet = ShipInSpace.Fire();
@@ -129,7 +121,6 @@ namespace StarWarsForPoor
                 this.Bullets.Add(shipBullet);
             }
         }
-
         public void CheckBullets()
         {
             Bullet delItem = null;
@@ -150,7 +141,6 @@ namespace StarWarsForPoor
                 Bullets.Remove(delItem);
             }
         }
-
         public void CheckShip()
         {
             if (Space.ShipInSpace.Lives <= 0)
@@ -163,7 +153,6 @@ namespace StarWarsForPoor
                 ShipDead(dat);
             }
         }
-
         public void CheckAsteroids()
         {
             Asteroid delItem = null;
@@ -186,7 +175,6 @@ namespace StarWarsForPoor
             }
 
         }
-
         public void GetShip(Ship selected)
         {
             Space.ShipInSpace = selected;
